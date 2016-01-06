@@ -9,9 +9,9 @@ alert('I will ask you 3 yes or no questions about myself.  Please answer with a 
 var ans1 = prompt('Question 1: Was Joe born in Cincinnati?');
 console.log('The user answered ' + ans1 + ' to question 1');
 
-if (ans1 === ('Y' || 'y' || 'yes' || 'YES')) {
+if ((ans1 === 'Y') || (ans1 === 'y') || (ans1 === 'YES') || (ans1 === 'yes')) {
   alert('You are correct!  Joe was born in Cincinnati.');
-} else if (ans1 === 'N') {
+} else if ((ans1 === 'N') || (ans1 === 'n') || (ans1 === 'NO') || (ans1 === 'no')) {
   alert('Sorry, you are wrong, Joe was actually born in Cincinnati');
 } else {
   alert('You did not answer Y or N :\(');
@@ -21,9 +21,9 @@ if (ans1 === ('Y' || 'y' || 'yes' || 'YES')) {
 var ans2 = prompt('Question 2: Does Joe like to snowboard?');
 console.log('The user answered ' + ans2 + ' to question 2');
 
-if (ans2 === 'Y') {
+if ((ans2 === 'Y') || (ans2 === 'y') || (ans2 === 'YES') || (ans2 === 'yes')) {
   alert('You are correct!  Joe does like to snowboard.');
-} else if (ans2 === 'N') {
+} else if ((ans2 === 'N') || (ans2 === 'n') || (ans2 === 'NO') || (ans2 === 'no')) {
   alert('Sorry, you are wrong, Joe does like to snowboard');
 } else {
   alert('You did not answer Y or N :\(');
@@ -33,9 +33,9 @@ if (ans2 === 'Y') {
 var ans3 = prompt('Question 3: Does Joe have 2 younger brothers?');
 console.log('The user answered ' + ans3 + ' to question 3');
 
-if (ans3 === 'Y') {
+if ((ans3 === 'Y') || (ans3 === 'y') || (ans3 === 'YES') || (ans3 === 'yes')) {
   alert('You are correct!  Joe does have 2 younger brothers.');
-} else if (ans3 === 'N') {
+} else if ((ans3 === 'N') || (ans3 === 'n') || (ans3 === 'NO') || (ans3 === 'no')) {
   alert('Sorry, you are wrong, Joe does have 2 younger brothers.');
 } else {
   alert('You did not answer Y or N :\(');
