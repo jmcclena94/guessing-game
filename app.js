@@ -4,14 +4,16 @@ console.log('The user\'s name is ' + userName + '.');
 alert('That is a fantastic name ' + userName + '!');
 
 alert('I will ask you 3 yes or no questions about myself.  Please answer with a Y or a N.');
+var correctCount = 0;
 
 /* Question 1 */
 var ans1 = prompt('Question 1: Was Joe born in Cincinnati?');
 console.log('The user answered ' + ans1 + ' to question 1');
 
-if ((ans1 === 'Y') || (ans1 === 'y') || (ans1 === 'YES') || (ans1 === 'yes')) {
+if ((ans1.toUpperCase() === 'Y') || (ans1.toUpperCase() === 'YES')) {
   alert('You are correct!  Joe was born in Cincinnati.');
-} else if ((ans1 === 'N') || (ans1 === 'n') || (ans1 === 'NO') || (ans1 === 'no')) {
+  correctCount += 1;
+} else if ((ans1.toUpperCase() === 'N') || (ans1.toUpperCase() === 'NO')) {
   alert('Sorry, you are wrong, Joe was actually born in Cincinnati');
 } else {
   alert('You did not answer Y or N :\(');
@@ -21,9 +23,10 @@ if ((ans1 === 'Y') || (ans1 === 'y') || (ans1 === 'YES') || (ans1 === 'yes')) {
 var ans2 = prompt('Question 2: Does Joe like to snowboard?');
 console.log('The user answered ' + ans2 + ' to question 2');
 
-if ((ans2 === 'Y') || (ans2 === 'y') || (ans2 === 'YES') || (ans2 === 'yes')) {
+if ((ans2.toUpperCase() === 'Y') || (ans2.toUpperCase() === 'YES')) {
   alert('You are correct!  Joe does like to snowboard.');
-} else if ((ans2 === 'N') || (ans2 === 'n') || (ans2 === 'NO') || (ans2 === 'no')) {
+  correctCount += 1;
+} else if ((ans2.toUpperCase() === 'N') || (ans2.toUpperCase() === 'NO')) {
   alert('Sorry, you are wrong, Joe does like to snowboard');
 } else {
   alert('You did not answer Y or N :\(');
@@ -33,16 +36,17 @@ if ((ans2 === 'Y') || (ans2 === 'y') || (ans2 === 'YES') || (ans2 === 'yes')) {
 var ans3 = prompt('Question 3: Does Joe have 2 younger brothers?');
 console.log('The user answered ' + ans3 + ' to question 3');
 
-if ((ans3 === 'Y') || (ans3 === 'y') || (ans3 === 'YES') || (ans3 === 'yes')) {
+if ((ans3.toUpperCase() === 'Y') || (ans3.toUpperCase() === 'YES')) {
   alert('You are correct!  Joe does have 2 younger brothers.');
-} else if ((ans3 === 'N') || (ans3 === 'n') || (ans3 === 'NO') || (ans3 === 'no')) {
+  correctCount += 1;
+} else if ((ans3.toUpperCase() === 'N') || (ans3.toUpperCase() === 'NO')) {
   alert('Sorry, you are wrong, Joe does have 2 younger brothers.');
 } else {
   alert('You did not answer Y or N :\(');
 }
 
-/* Optional question 4 */
-alert('I will now ask you a final question with a numeric answer.  Please answer with a number.');
+/* High/Low question 4 */
+alert('I will now ask you another question with a numeric answer.  Please answer with a number.');
 
 var ans4 = prompt('Question 4: How many years did Joe live in Houston, TX?');
 console.log('The user guessed that Joe lived in Houston for ' + ans4 + ' years.');
@@ -53,6 +57,7 @@ if (ans4 > 3) {
   alert('Sorry, Joe lived in Houston for 3 years.');
 } else if (ans4 == 3) {
   alert('You guessed it!  He lived in Houston for 3 years.');
+  correctCount += 1;
 } else {
   alert('Sorry, you did not enter a number :\(');
 }
