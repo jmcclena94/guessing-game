@@ -62,4 +62,31 @@ if (ans4 > 3) {
   alert('Sorry, you did not enter a number :\(');
 }
 
-alert('Great job answering those questions about Joe');
+/* Let them know how many they got right */
+if (correctCount > 2) {
+  alert('Way to go buddy, you got ' + correctCount + '/4 questions correct.  You must know Joe pretty well!');
+} else {
+  alert('Ouch.  You only got ' + correctCount + '/4 questions correct.  You obviously don\'t know joe very well.');
+}
+
+/* Final question, guess my number */
+alert('Great job answering those questions about Joe.  For my final question, I would like you to guess the number I am thinking of.');
+var ans5 = prompt('What is the number I am thinking of?');
+var correctGuess = 0;
+var myNum = 83;
+
+while (correctGuess < 1) {
+  if (ans5 < myNum) {
+    ans5 = prompt('That guess was too low, guess again');
+  } else if (ans5 > myNum) {
+    ans5 = prompt('That guess was too high, guess again');
+  } else if (ans5 == myNum) {
+    alert('That guess was just right!  You guess my number ' + myNum + '.');
+    correctGuess += 1;
+  } else {
+    ans5 = prompt('You did not guess a number :\(, please guess a number this time.');;
+  }
+}
+
+
+alert('Awesome.  Have a great day!');
