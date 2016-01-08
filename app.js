@@ -7,6 +7,40 @@ alert('That is a fantastic name ' + userName + '!');
 alert('I will ask you 3 yes or no questions about myself.  Please answer with a Y or a N.');
 var correctCount = 0;
 
+var questions = ['Question 1: Was Joe born in Cincinnati?', 'Question 2: Does Joe like to snowboard?', 'Question 3: Does Joe have 2 younger brothers?'];
+
+var answers0 = ['Y', 'YES', 'N', 'NO'];
+
+var responses0 = ['You are correct!  Joe was born in Cincinnati.', 'You are correct!  Joe was born in Cincinnati.', 'Sorry, you are wrong, Joe was actually born in Cincinnati', 'Sorry, you are wrong, Joe was actually born in Cincinnati', 'You did not answer Y or N :\('];
+var responses1 = ['You are correct!  Joe does like to snowboard.', 'You are correct!  Joe does like to snowboard.', 'Sorry, you are wrong, Joe does like to snowboard', 'Sorry, you are wrong, Joe does like to snowboard', 'You did not answer Y or N :\('];
+var responses2 = ['You are correct!  Joe does have 2 younger brothers.', 'You are correct!  Joe does have 2 younger brothers.', 'Sorry, you are wrong, Joe does have 2 younger brothers.', 'Sorry, you are wrong, Joe does have 2 younger brothers.', 'You did not answer Y or N :\(']
+
+var answers = [answers0, answers0, answers0];
+var responses = [responses0, responses1, responses2]
+
+var responseElement = [document.getElementById('resultOne'), document.getElementById('resultTwo'), document.getElementById('resultThree')];
+
+
+function question(index) {
+  responseElement[index].textContent = questions[index];
+  var promptInput = prompt('questions[index]');
+  var matchNum = answers[index].indexOf(promptInput);
+  if (matchNum === -1) {
+    responseElement.className = 'wrong';
+    responseElement[index].textContent = responses[index][(responses[index].length - 1)];
+  } else {
+    if (matchNum === 0 || matchNum === 1) {
+      responseElement.className = 'right';
+      responseElement[index].textContent = responses[index][matchNum];
+      correctCount++;
+    } else {
+      responseElement.className = 'wrong';
+      responseElement[index].textContent = responses[index][matchNum];
+    }
+  }
+}
+
+
 //Question 1
 var res1 = document.getElementById('resultOne');
 function firstQuestion (){
