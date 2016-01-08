@@ -1,4 +1,4 @@
-  /* Ask the user their name */
+//Ask the user their name
 
 var userName = prompt('What is your name?');
 console.log('The user\'s name is ' + userName + '.');
@@ -7,9 +7,9 @@ alert('That is a fantastic name ' + userName + '!');
 alert('I will ask you 3 yes or no questions about myself.  Please answer with a Y or a N.');
 var correctCount = 0;
 
-/* Question 1 */
+//Question 1
 var res1 = document.getElementById('resultOne')
-function firstquestion (){
+function firstQuestion (){
   var ans1 = prompt('Question 1: Was Joe born in Cincinnati?');
   console.log('The user answered ' + ans1 + ' to question 1');
 
@@ -22,9 +22,10 @@ function firstquestion (){
     res1.textContent='You did not answer Y or N :\(';
   }
 }
-    firstquestion()
 
-/* Question 2 */
+firstQuestion();
+
+//Question 2
 var res2 = document.getElementById('resultTwo')
 function secondQuestion (){
   var ans2 = prompt('Question 2: Does Joe like to snowboard?');
@@ -39,8 +40,10 @@ function secondQuestion (){
     res2.textContent='You did not answer Y or N :\(';
   }
 }
-    secondQuestion()
 
+secondQuestion();
+
+//Question 3
 var res3 = document.getElementById('resultThree')
 function thirdQuestion (){
   var ans3 = prompt('Question 3: Does Joe have 2 younger brothers?');
@@ -55,10 +58,10 @@ function thirdQuestion (){
     res3.textContent='You did not answer Y or N :\(';
   }
 }
-/* Question 3 */
-   thirdQuestion()
 
-/* High/Low question 4 */
+thirdQuestion();
+
+//Question 4
 alert('I will now ask you another question with a numeric answer.  Please answer with a number.');
 var res4=document.getElementById('resultFour')
 function fourthQuestion(){
@@ -76,16 +79,17 @@ function fourthQuestion(){
     res4.textContent='Sorry, you did not enter a number :\(';
   }
 }
-    fourthQuestion()
 
-/* Let them know how many they got right */
+fourthQuestion();
+
+//Let them know how many they got correct
 if (correctCount > 2) {
   alert('Way to go buddy, you got ' + correctCount + '/4 questions correct.  You must know Joe pretty well!');
 } else {
   alert('Ouch.  You only got ' + correctCount + '/4 questions correct.  You obviously don\'t know joe very well.');
 }
 
-/* Final question, guess my number */
+//Final question: Guess my number
 alert('Great job answering those questions about Joe.  For my final question, I would like you to guess the number I am thinking of.');
 var res5=document.getElementById('resultFive')
 function fifthQuestion(){
@@ -116,8 +120,8 @@ function fifthQuestion(){
   }
 }
 
-      fifthQuestion()
+fifthQuestion();
 
 alert('Awesome.  Have a great day!');
 
-/*End of Guessing Game script */
+//End of Guessing Game script
