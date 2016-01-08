@@ -8,7 +8,7 @@ alert('I will ask you 3 yes or no questions about myself.  Please answer with a 
 var correctCount = 0;
 
 //Question 1
-var res1 = document.getElementById('resultOne')
+var res1 = document.getElementById('resultOne');
 function firstQuestion (){
   var ans1 = prompt('Question 1: Was Joe born in Cincinnati?');
   console.log('The user answered ' + ans1 + ' to question 1');
@@ -26,7 +26,7 @@ function firstQuestion (){
 firstQuestion();
 
 //Question 2
-var res2 = document.getElementById('resultTwo')
+var res2 = document.getElementById('resultTwo');
 function secondQuestion (){
   var ans2 = prompt('Question 2: Does Joe like to snowboard?');
   console.log('The user answered ' + ans2 + ' to question 2');
@@ -44,7 +44,7 @@ function secondQuestion (){
 secondQuestion();
 
 //Question 3
-var res3 = document.getElementById('resultThree')
+var res3 = document.getElementById('resultThree');
 function thirdQuestion (){
   var ans3 = prompt('Question 3: Does Joe have 2 younger brothers?');
   console.log('The user answered ' + ans3 + ' to question 3');
@@ -63,7 +63,7 @@ thirdQuestion();
 
 //Question 4
 alert('I will now ask you another question with a numeric answer.  Please answer with a number.');
-var res4=document.getElementById('resultFour')
+var res4=document.getElementById('resultFour');
 function fourthQuestion(){
   var ans4 = prompt('Question 4: How many years did Joe live in Houston, TX?');
   console.log('The user guessed that Joe lived in Houston for ' + ans4 + ' years.');
@@ -91,7 +91,7 @@ if (correctCount > 2) {
 
 //Final question: Guess my number
 alert('Great job answering those questions about Joe.  For my final question, I would like you to guess the number I am thinking of.');
-var res5=document.getElementById('resultFive')
+var res5=document.getElementById('resultFive');
 function fifthQuestion(){
   var ans5 = prompt('What is the number I am thinking of?');
   var correctGuess = 0;
