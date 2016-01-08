@@ -2,9 +2,8 @@
 
 var userName = prompt('What is your name?');
 console.log('The user\'s name is ' + userName + '.');
-alert('That is a fantastic name ' + userName + '!');
+alert('That is a great name ' + userName + '!  I will ask you 3 yes or no questions about myself.  Please answer with a Y or a N.');
 
-alert('I will ask you 3 yes or no questions about myself.  Please answer with a Y or a N.');
 var correctCount = 0;
 
 var questions = ['Question 1: Was Joe born in Cincinnati?', 'Question 2: Does Joe like to snowboard?', 'Question 3: Does Joe have 2 younger brothers?'];
@@ -13,10 +12,10 @@ var answers0 = ['Y', 'YES', 'N', 'NO'];
 
 var responses0 = ['You are correct!  Joe was born in Cincinnati.', 'You are correct!  Joe was born in Cincinnati.', 'Sorry, you are wrong, Joe was actually born in Cincinnati', 'Sorry, you are wrong, Joe was actually born in Cincinnati', 'You did not answer Y or N :\('];
 var responses1 = ['You are correct!  Joe does like to snowboard.', 'You are correct!  Joe does like to snowboard.', 'Sorry, you are wrong, Joe does like to snowboard', 'Sorry, you are wrong, Joe does like to snowboard', 'You did not answer Y or N :\('];
-var responses2 = ['You are correct!  Joe does have 2 younger brothers.', 'You are correct!  Joe does have 2 younger brothers.', 'Sorry, you are wrong, Joe does have 2 younger brothers.', 'Sorry, you are wrong, Joe does have 2 younger brothers.', 'You did not answer Y or N :\(']
+var responses2 = ['You are correct!  Joe does have 2 younger brothers.', 'You are correct!  Joe does have 2 younger brothers.', 'Sorry, you are wrong, Joe does have 2 younger brothers.', 'Sorry, you are wrong, Joe does have 2 younger brothers.', 'You did not answer Y or N :\('];
 
 var answers = [answers0, answers0, answers0];
-var responses = [responses0, responses1, responses2]
+var responses = [responses0, responses1, responses2];
 
 var responseElement = [document.getElementById('resultOne'), document.getElementById('resultTwo'), document.getElementById('resultThree')];
 
@@ -40,70 +39,14 @@ function question(index) {
   }
 }
 
-
-// //Question 1
-// var res1 = document.getElementById('resultOne');
-// function firstQuestion (){
-//   var ans1 = prompt('Question 1: Was Joe born in Cincinnati?');
-//   console.log('The user answered ' + ans1 + ' to question 1');
-//
-//   if ((ans1.toUpperCase() === 'Y') || (ans1.toUpperCase() === 'YES')) {
-//     res1.textContent='You are correct!  Joe was born in Cincinnati.';
-//     correctCount += 1;
-//   } else if ((ans1.toUpperCase() === 'N') || (ans1.toUpperCase() === 'NO')) {
-//     res1.textContent='Sorry, you are wrong, Joe was actually born in Cincinnati';
-//   } else {
-//     res1.textContent='You did not answer Y or N :\(';
-//   }
-// }
-//
-// firstQuestion();
-//
-// //Question 2
-// var res2 = document.getElementById('resultTwo');
-// function secondQuestion (){
-//   var ans2 = prompt('Question 2: Does Joe like to snowboard?');
-//   console.log('The user answered ' + ans2 + ' to question 2');
-//
-//   if ((ans2.toUpperCase() === 'Y') || (ans2.toUpperCase() === 'YES')) {
-//     res2.textContent='You are correct!  Joe does like to snowboard.';
-//     correctCount += 1;
-//   } else if ((ans2.toUpperCase() === 'N') || (ans2.toUpperCase() === 'NO')) {
-//     res2.textContent='Sorry, you are wrong, Joe does like to snowboard';
-//   } else {
-//     res2.textContent='You did not answer Y or N :\(';
-//   }
-// }
-//
-// secondQuestion();
-//
-// //Question 3
-// var res3 = document.getElementById('resultThree');
-// function thirdQuestion (){
-//   var ans3 = prompt('Question 3: Does Joe have 2 younger brothers?');
-//   console.log('The user answered ' + ans3 + ' to question 3');
-//
-//   if ((ans3.toUpperCase() === 'Y') || (ans3.toUpperCase() === 'YES')) {
-//     res3.textcontent='You are correct!  Joe does have 2 younger brothers.';
-//     correctCount += 1;
-//   } else if ((ans3.toUpperCase() === 'N') || (ans3.toUpperCase() === 'NO')) {
-//     res3.textContent='Sorry, you are wrong, Joe does have 2 younger brothers.';
-//   } else {
-//     res3.textContent='You did not answer Y or N :\(';
-//   }
-// }
-//
-// thirdQuestion();
-
 question(0);
 question(1);
 question(2);
 
 //Question 4
-alert('I will now ask you another question with a numeric answer.  Please answer with a number.');
 var res4=document.getElementById('resultFour');
 function fourthQuestion(){
-  var ans4 = prompt('Question 4: How many years did Joe live in Houston, TX?');
+  var ans4 = prompt('Question 4: How many years did Joe live in Houston?  Please answer with a number.');
   console.log('The user guessed that Joe lived in Houston for ' + ans4 + ' years.');
 
   if (ans4 > 3) {
@@ -132,10 +75,9 @@ if (correctCount > 2) {
 }
 
 //Final question: Guess my number
-alert('Great job answering those questions about Joe.  For my final question, I would like you to guess the number I am thinking of.');
 var res5=document.getElementById('resultFive');
 function fifthQuestion(){
-  var ans5 = prompt('What is the number I am thinking of?');
+  var ans5 = prompt('Final question: What is the number I am thinking of?');
   var correctGuess = 0;
   var numGuess = 0;
   var myNum = 83;
@@ -167,6 +109,12 @@ function fifthQuestion(){
 }
 
 fifthQuestion();
+
+var pGame = document.createElement('a');
+var linkText = document.createTextNode("Click on me to check out my partner Nick\'s game.");
+pGame.appendChild(linkText);
+pGame.href = "http://nicksenger.github.io/qgame/";
+document.body.appendChild(pGame);
 
 alert('Awesome.  Have a great day!');
 
