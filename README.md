@@ -7,6 +7,8 @@ Licensing: For licensing info, please read the LICENSE.
 
 Author: Joe McClenahan
 
+Driver: Nick Senger
+
 Edited by: Gurpreet Singh
 
 ** To submit bugs, feature requests, patches, join the mailing list, or get announcements, please email jmcclena94@gmail.com **
