@@ -6,7 +6,7 @@ Description: This is the Guessing Game assignment for the Seattle Code Fellows 2
 Licensing: For licensing info, please read the LICENSE.
 
 Author: Joe McClenahan
-edited by: Gurpreet Singh
+Edited by: Gurpreet Singh
 
 ** To submit bugs, feature requests, patches, join the mailing list, or get announcements, please email jmcclena94@gmail.com **
 
