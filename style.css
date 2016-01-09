@@ -5,3 +5,25 @@
 .wrong {
   color: red;
 }
+
+a:link {
+  text-decoration: none;
+  color: cyan;
+}
+
+a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: none;
+  color: hotpink;
+}
+
+img {
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  width: 250px;
+}
