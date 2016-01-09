@@ -1,5 +1,4 @@
 //Ask the user their name
-
 var userName = prompt('What is your name?');
 console.log('The user\'s name is ' + userName + '.');
 alert('That is a great name ' + userName + '!  I will ask you 3 yes or no questions about myself.  Please answer with a Y or a N.');
@@ -18,7 +17,7 @@ var answers = [answers0, answers0, answers0];
 var responses = [responses0, responses1, responses2];
 
 var responseElement = [document.getElementById('resultOne'), document.getElementById('resultTwo'), document.getElementById('resultThree')];
-
+var imageElement = document.getElementById('image');
 
 function question(index) {
   responseElement[index].textContent = questions[index];
@@ -27,6 +26,7 @@ function question(index) {
   if (matchNum === -1) {
     responseElement[index].className = 'wrong';
     responseElement[index].textContent = responses[index][(responses[index].length - 1)];
+    // imageElement.style='display:block;';
   } else {
     if (matchNum === 0 || matchNum === 1) {
       responseElement[index].className = 'right';
@@ -38,10 +38,9 @@ function question(index) {
     }
   }
 }
-
-question(0);
-question(1);
-question(2);
+for (i = 0; i < questions.length; i++) {
+  question(i);
+}
 
 //Question 4
 var res4=document.getElementById('resultFour');

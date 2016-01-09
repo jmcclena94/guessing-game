@@ -20,3 +20,10 @@ a:hover {
   text-decoration: none;
   color: hotpink;
 }
+
+img {
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  width: 250px;
+}
