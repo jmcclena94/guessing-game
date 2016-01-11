@@ -26,7 +26,7 @@ function question(index) {
   if (matchNum === -1) {
     responseElement[index].className = 'wrong';
     responseElement[index].textContent = responses[index][(responses[index].length - 1)];
-    // imageElement.style='display:block;';
+    imageElement.src='http://i.imgur.com/L3J6n.jpg';
   } else {
     if (matchNum === 0 || matchNum === 1) {
       responseElement[index].className = 'right';
@@ -113,6 +113,7 @@ var pGame = document.createElement('a');
 var linkText = document.createTextNode("Click on me to check out my partner Nick\'s game.");
 pGame.appendChild(linkText);
 pGame.href = "http://nicksenger.github.io/qgame/";
+pGame.className = 'pGame';
 document.body.appendChild(pGame);
 
 alert('Awesome.  Have a great day!');

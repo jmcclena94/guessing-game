@@ -6,6 +6,20 @@
   color: red;
 }
 
+div {
+  float: left;
+  position: relative;
+}
+
+
+.pGame {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 150px;
+  margin-left: -185px;
+}
+
 a:link {
   text-decoration: none;
   color: cyan;
@@ -22,8 +36,26 @@ a:hover {
 }
 
 img {
-  position: absolute;
-  top: 100px;
-  left: 500px;
+  vertical-align: bottom;
   width: 250px;
+}
+
+h1 {
+  color: red;
+  font-family: verdana;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -350px;
+}
+
+.intro {
+  color: blue;
+  font-family: verdana;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 1px;
+  margin-left: -250px;
 }
